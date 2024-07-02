@@ -20,5 +20,22 @@ def checker(word,row,col,puzzel,direction):
             return True
     return False
 
+def puzzel_solver(puzzle , name_list , index = 0):
+    if len(name_list) == 0 :
+        puzzle_printer()
+        return 
+    word = name_list[index]
+    for direction in ("rowy","coly"):
+        for row in len(puzzle):
+            for col in len(puzzle[0]):
+                if checker(word,row,col,puzzle,direction):
+                    place_word(word,row,col,puzzle,direction)
+                    
+                    # چجوری ریکرسیو بشه ؟
+                    # چجوری بک ترکینگش کنیم ؟
 
-def puzzel_solver(len_list , name_list):
+def place_word(word,row,col,puzzle,direction):
+    pass
+
+def puzzle_printer():
+    pass
