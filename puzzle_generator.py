@@ -6,6 +6,7 @@ for i in range(row):
 name_list = list(input(" Enter the list of the names : ").split()) 
 
 def checker(word,row,col,puzzel,direction):
+    # فقط حرکت روبه راست و پایین بررسی میشه چونبا بکترکینگ مینویسیم برنمیگردیم درسته ؟
     if direction == "rowy":
         for i in range(len(word)):
             if puzzle[row][col+i] == "#":
@@ -39,3 +40,5 @@ def place_word(word,row,col,puzzle,direction):
 
 def puzzle_printer():
     pass
+
+# تابع دیگری نیاز داریم ؟
