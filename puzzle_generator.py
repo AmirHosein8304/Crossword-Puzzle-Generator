@@ -61,3 +61,4 @@ for i in range(row):
 name_list = list(input(" Enter the list of the names : ").split()) 
 
 puzzel_solver(puzzle,name_list)
+######################################################  بدون ترکیب
