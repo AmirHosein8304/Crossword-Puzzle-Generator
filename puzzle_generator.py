@@ -24,12 +24,15 @@ def checker(word,row,col,puzzel,direction):
             if puzzle[row+i][col] != word[i]:
                 return False
     return True
-
+flag = False
 def puzzle_solver(puzzle , name_list , index = 0):
+    if flag:
+        return
     puzzle_setter = deepcopy(puzzle)
     for per in permutations(name_list):
         name_list = list(per)
         if len(name_list) == index+1:
+            flag = True
             puzzle_printer(puzzle)
             return 
         word = name_list[index]
