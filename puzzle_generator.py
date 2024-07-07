@@ -26,6 +26,7 @@ def checker(word,row,col,puzzel,direction):
     return True
 flag = False
 def puzzle_solver(puzzle , name_list , index = 0):
+    global flag
     if flag:
         return
     puzzle_setter = deepcopy(puzzle)
